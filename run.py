@@ -12,20 +12,33 @@ computer_ships = []
 """
 Creating the grid for the game
 """
-grid = []
+player_grid = []
+computer_grid = []
 for i in range(playground):
-    row = []
+    player_row = []
+    computer_row = []
     for a in range(playground):
-        row.append('-')
-    grid.append(row)
+        player_row.append('-')
+        computer_row.append('-')
+    player_grid.append(player_row)
+    computer_grid.append(computer_row)
 
 """
-Function to start the game grid
+Function to start the player's game grid
 """
 def game_grid():
     for i in range(playground):
         for a in range(playground):
-            grid[i][a] = '_'
+            player_grid[i][a] = '_'
+
+
+"""
+Function to start the computers's game grid
+"""
+def computer_game_grid():
+    for i in range(playground):
+        for a in range(playground):
+            computer_grid = '_'
 
 """
 Function to print the game grid onto terminal
@@ -78,17 +91,27 @@ def computer_guess():
     return [guess_row, guess_column]
 
 """
-Function that checks if the guess is a hit or a miss
+Function that checks if the player's guess is a hit or a miss
 """
 
-def check_input(guess):
+def check_player_input(guess):
     guess_row, guess_column = guess
     if [guess_row, guess_column] in ships:
         print("Congrats! You've sunk a bloody battleship! How did you do that?!?")
-        grid[guess_row][guess_column] = 'X'
+        computer_ships.remove([guess_row, guess_column])
+        player_grid[guess_row][guess_column] = 'X'
         return True
     else:
         print("Pathetic! you've missed!")
+        player_grid[guess_row][guess_column] = 'M'
+
+
+def check_computer_guess(guess):
+    guess_row, guess_column = guess
+    if [guess_row, guess_column] in player_ships:
+        print("Oh noes! The computer has sunk one of your battleships!")
+        player_ships.remove([guess_row, guess_column])
+        
 
 """
 Function to start the main game and printing using a template literal to inform player of how many moves it took to win the game
