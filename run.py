@@ -113,7 +113,7 @@ def check_computer_guess(guess):
     if [guess_row, guess_column] in player_ships:
         print("Oh noes! The computer has sunk one of your battleships!")
         player_ships.remove([guess_row, guess_column])
-        player_grid[guess_row, guess_column] = 'X'
+        player_grid[guess_row] [guess_column] = 'X'
         
 
 """
@@ -131,7 +131,7 @@ def play_game():
         num_guesses += 1
         if check_player_input(guess):
             if not computer_ships:
-            print(f"It took you {num_guesses} to sink all battleships! You're a genius!")
+                print(f"It took you {num_guesses} to sink all battleships! you're a genius!")
             break
         else:
             computer_guess = computer_guess()
