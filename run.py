@@ -138,7 +138,7 @@ def play_game():
             check_computer_guess(computer_guess)
             print((f"The computer guessed row {computer_guess[0] + 1} and column {computer_guess[1] + 1}."))
             if not player_ships:
-                print(f"The computer sunk all of your ships in {num_guesses}" turns! You lose!)
+                print(f"The computer sunk all of your ships in {num_guesses} turns! You lose!")
                 break
         print_grid()
 
