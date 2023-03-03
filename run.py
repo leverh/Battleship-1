@@ -78,7 +78,7 @@ def get_player_input():
         try:
             guess_row = int(input("Guess row (numbers 1  to 10): "))
             guess_column = int(input("Guess Column (numbers 1  to 10): "))
-            return[guess_row, guess_column]
+            return[guess_row - 1, guess_column - 1]
         except ValueError:
             print("I'm sure you meant to type a number, so please enter a damned number!!")
 
