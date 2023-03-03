@@ -89,6 +89,7 @@ def computer_guess():
         guess_column = random.randint(0, playground - 1)
         if [guess_row, guess_column] not in computer_guesses:
             break
+    computer_guesses.append([guess_row, guess_column])
     return [guess_row, guess_column]
 
 """
@@ -120,15 +121,24 @@ Function to start the main game and printing using a template literal to inform 
 
 def play_game():
     game_grid()
-    position()
+    player_position_ships()
+    computer_position_ships()
     print_grid()
     num_guesses = 0
     while True:
-        guess = get_input()
+        guess = get_player_input()
         num_guesses += 1
-        if check_input(guess):
+        if check_player_input(guess):
+        if not computer_ships:
             print(f"It took you {num_guesses} to sink all battleships! You're a genius!")
             break
+        else:
+            computer_guess = computer_guess()
+            check_computer_guess(computer_guess)
+            print((f"The computer guessed row {computer_guess[0] + 1} and column {computer_guess[1] + 1}."))
+            if not player_ships:
+                print(f"The computer sunk all of your ships in {num_guesses}" turns! You lose!)
+                break
         print_grid()
 
 
