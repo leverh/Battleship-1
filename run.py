@@ -2,7 +2,12 @@ import random
 
 
 """
-Global Variables
+Global Variables:
+playground: the size of the game grid
+nums_ships: number of ships on the grid
+player_ships: a list for player's ships
+computer_ships: a list for the computer's ships
+computer guesses: to store the position of the computer's guesses
 """
 playground = 10
 nums_ships = 5
@@ -12,6 +17,8 @@ computer_guesses = []
 
 """
 Creating the grid for the game
+player_grid: list of list to store player's game grid
+computer_grid: list of lists to store the computer's grid
 """
 player_grid = []
 computer_grid = []
@@ -25,8 +32,10 @@ for i in range(playground):
     computer_grid.append(computer_row)
 
 """
-Function to start the player's game grid
+Function to initialize the player's game grid with empty spaces - the underscores _
 """
+
+
 def game_grid():
     for i in range(playground):
         for a in range(playground):
@@ -34,23 +43,31 @@ def game_grid():
 
 
 """
-Function to start the computers's game grid
+Function to initialize the computers's game grid with underscores
 """
+
+
 def computer_game_grid():
     for i in range(playground):
         for a in range(playground):
             computer_grid[i][a] = '_'
 
+
 """
 Function to print the game grid onto terminal
 """
+
+
 def print_grid():
     for row in player_grid:
         print(''.join(row))
 
+
 """
-Function to place the ships on player's grid
+Function that randomly positions player's ships on grid and mark the positions with a circle (or rather, a capital O)
 """
+
+
 def player_position_ships():
     for i in range(nums_ships):
         ship_row = random.randint(0, playground - 1)
@@ -60,27 +77,38 @@ def player_position_ships():
 
 
 """
-Function to place ships on the computer's grid
+Function that randomly positions the computer's ships on grid and mark the positions with a circle (or rather, a capital O)
 """
-def computer_position_ships(): 
+
+
+def computer_position_ships():
     for i in range(nums_ships):
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
         computer_ships.append([ship_row, ship_column])
         computer_grid[ship_row][ship_column] = 'O'
 
+
 """
-Function to get the player's guesses 
+Function to prompt the player to enter row and column of choice and return them as a list
+list will contain the row and column of guess
 """
+
 
 def get_player_input():
     while True:
         try:
             guess_row = int(input("Guess row (numbers 1  to 10): "))
             guess_column = int(input("Guess Column (numbers 1  to 10): "))
-            return[guess_row - 1, guess_column - 1]
+            return [guess_row - 1, guess_column - 1]
         except ValueError:
-            print("I'm sure you meant to type a number, so please enter a damned number!!")
+            print("Please enter a number between 1 and 10")
+
+
+"""
+Randomly generate the computer's choice in a list of rows and columns.
+list will contain the row and column of guess
+"""
 
 
 def computer_guess():
@@ -92,9 +120,12 @@ def computer_guess():
     computer_guesses.append([guess_row, guess_column])
     return [guess_row, guess_column]
 
+
 """
-Function that checks if the player's guess is a hit or a miss
+Function that checks if the player's guess is a hit or a miss and update the game grid
+True if the guess is a hit and False otherwise
 """
+
 
 def check_player_input(guess):
     guess_row, guess_column = guess
@@ -108,17 +139,24 @@ def check_player_input(guess):
         computer_grid[guess_row][guess_column] = 'M'
 
 
+"""
+check if the computer's guess is a hit or not and update the game grid
+"""
+
+
 def check_computer_guess(guess):
     guess_row, guess_column = guess
     if [guess_row, guess_column] in player_ships:
         print("Oh noes! The computer has sunk one of your battleships!")
         player_ships.remove([guess_row, guess_column])
-        player_grid[guess_row] [guess_column] = 'X'
-        
+        player_grid[guess_row][guess_column] = 'X'
+
 
 """
-Function to start the main game and printing using a template literal to inform player of how many moves it took to win the game
+Function to start the main game and alternate turns until player or computer finish sinking all ships
+template literals to inform player of state of game and win message
 """
+
 
 def play_game():
     game_grid()
@@ -140,12 +178,12 @@ def play_game():
                 break
             check_computer_guess(computer_guess_location)
             print((f"The computer guessed row {computer_guess_location[0] + 1} and column {computer_guess_location[1] + 1}."))
-            
         print_grid()
 
 
 """
 Calling the main game function to start the game
 """
+
 
 play_game()
