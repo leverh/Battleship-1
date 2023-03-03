@@ -33,13 +33,20 @@ def print_grid():
     for row in grid:
         print(''.join(row))
 
-
+"""
+Function to place the ships on the grid
+"""
 def position():
     for i in range(nums_ships):
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
         ships.append([ship_row, ship_column])
         grid[ship_row][ship_column] = 'O'
+
+
+"""
+Function to get the player's guesses 
+"""
 
 def get_input():
     while True:
@@ -51,6 +58,10 @@ def get_input():
             print("I'm sure you meant to type a number, so please enter a damned number!!")
 
 
+"""
+Function that checks if the guess is a hit or a miss
+"""
+
 def check_input(guess):
     guess_row, guess_column = guess
     if [guess_row, guess_column] in ships:
@@ -59,6 +70,10 @@ def check_input(guess):
         return True
     else:
         print("Pathetic! you've missed!")
+
+"""
+Function to start the main game 
+"""
 
 def play_game():
     game_grid()
@@ -72,5 +87,10 @@ def play_game():
             print(f"It took you {num_guesses} to sink all battleships! You're a genius!")
             break
         print_grid()
+
+
+"""
+Calling the main game function to start the game
+"""
 
 play_game()
