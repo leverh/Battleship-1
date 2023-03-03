@@ -34,3 +34,9 @@ def print_grid():
         print(''.join(row))
 
 
+def position():
+    for i in range(nums_ships):
+        ship_row = random.randint(0, playground - 1)
+        ship_column = random.randint(0, playground - 1)
+        ships.append(ship_row, ship_column)
+position()
