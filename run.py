@@ -51,8 +51,8 @@ Function to get the player's guesses
 def get_input():
     while True:
         try:
-            guess_row = int(input("Guess row (integer): "))
-            guess_column = int(input("Guess Column (integer): "))
+            guess_row = int(input("Guess row (numbers 1  to 10): "))
+            guess_column = int(input("Guess Column (numbers 1  to 10): "))
             return[guess_row, guess_column]
         except ValueError:
             print("I'm sure you meant to type a number, so please enter a damned number!!")
@@ -72,7 +72,7 @@ def check_input(guess):
         print("Pathetic! you've missed!")
 
 """
-Function to start the main game 
+Function to start the main game and printing using a template literal to inform player of how many moves it took to win the game
 """
 
 def play_game():
