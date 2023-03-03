@@ -8,6 +8,7 @@ playground = 10
 nums_ships = 5
 player_ships = []
 computer_ships = []
+computer_guesses = []
 
 """
 Creating the grid for the game
@@ -38,13 +39,13 @@ Function to start the computers's game grid
 def computer_game_grid():
     for i in range(playground):
         for a in range(playground):
-            computer_grid = '_'
+            computer_grid[i][a] = '_'
 
 """
 Function to print the game grid onto terminal
 """
 def print_grid():
-    for row in grid:
+    for row in player_grid:
         print(''.join(row))
 
 """
