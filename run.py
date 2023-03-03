@@ -130,7 +130,7 @@ def play_game():
         guess = get_player_input()
         num_guesses += 1
         if check_player_input(guess):
-        if not computer_ships:
+            if not computer_ships:
             print(f"It took you {num_guesses} to sink all battleships! You're a genius!")
             break
         else:
