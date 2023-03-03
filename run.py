@@ -41,4 +41,7 @@ def position():
         ships.append([ship_row, ship_column])
         grid[ship_row][ship_column] = 'X'
 
-
+def get_input():
+    guess_row = input("Guess row: ")
+    guess_column = input("Guess Column: ")
+    return[guess_row, guess_column]
