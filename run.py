@@ -6,7 +6,8 @@ Global Variables
 """
 playground = 10
 nums_ships = 5
-ships = []
+player_ships = []
+computer_ships = []
 
 """
 Creating the grid for the game
@@ -58,7 +59,7 @@ def computer():
 Function to get the player's guesses 
 """
 
-def get_input():
+def get_player_input():
     while True:
         try:
             guess_row = int(input("Guess row (numbers 1  to 10): "))
@@ -67,6 +68,14 @@ def get_input():
         except ValueError:
             print("I'm sure you meant to type a number, so please enter a damned number!!")
 
+
+def computer_guess():
+    while True:
+        guess_row = random.randint(0, playground - 1)
+        guess_column = random.randint(0, playground - 1)
+        if [guess_row, guess_column] not in computer_guesses:
+            break
+    return [guess_row, guess_column]
 
 """
 Function that checks if the guess is a hit or a miss
