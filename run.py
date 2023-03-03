@@ -98,8 +98,8 @@ list will contain the row and column of guess
 def get_player_input():
     while True:
         try:
-            guess_row = int(input("Guess row (numbers 1  to 10): "))
-            guess_column = int(input("Guess Column (numbers 1  to 10): "))
+            guess_row = int(input("Guess row (numbers 1  to 10): \n"))
+            guess_column = int(input("Guess Column (numbers 1  to 10): \n"))
             return [guess_row - 1, guess_column - 1]
         except ValueError:
             print("Please enter a number between 1 and 10")
