@@ -98,14 +98,14 @@ Function that checks if the player's guess is a hit or a miss
 
 def check_player_input(guess):
     guess_row, guess_column = guess
-    if [guess_row, guess_column] in ships:
+    if [guess_row, guess_column] in computer_ships:
         print("Congrats! You've sunk a bloody battleship! How did you do that?!?")
         computer_ships.remove([guess_row, guess_column])
         player_grid[guess_row][guess_column] = 'X'
         return True
     else:
         print("Pathetic! you've missed!")
-        player_grid[guess_row][guess_column] = 'M'
+        computer_grid[guess_row][guess_column] = 'M'
 
 
 def check_computer_guess(guess):
@@ -113,6 +113,7 @@ def check_computer_guess(guess):
     if [guess_row, guess_column] in player_ships:
         print("Oh noes! The computer has sunk one of your battleships!")
         player_ships.remove([guess_row, guess_column])
+        player_grid[guess_row, guess_column] = 'X'
         
 
 """
