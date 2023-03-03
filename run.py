@@ -66,8 +66,8 @@ def computer_position_ships():
     for i in range(nums_ships):
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
-        ships.append([ship_row, ship_column])
-        grid[ship_row][ship_column] = 'O'
+        computer_ships.append([ship_row, ship_column])
+        computer_grid[ship_row][ship_column] = 'O'
 
 """
 Function to get the player's guesses 
