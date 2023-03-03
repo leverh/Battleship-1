@@ -39,4 +39,6 @@ def position():
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
         ships.append([ship_row, ship_column])
-position()
+        grid[ship_row][ship_column] = 'X'
+
+
