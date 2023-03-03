@@ -55,8 +55,8 @@ def player_position_ships():
     for i in range(nums_ships):
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
-        ships.append([ship_row, ship_column])
-        grid[ship_row][ship_column] = 'O'
+        player_ships.append([ship_row, ship_column])
+        player_grid[ship_row][ship_column] = 'O'
 
 
 """
