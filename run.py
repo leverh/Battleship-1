@@ -39,7 +39,7 @@ def position():
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
         ships.append([ship_row, ship_column])
-        grid[ship_row][ship_column] = 'X'
+        grid[ship_row][ship_column] = 'O'
 
 def get_input():
     while True:
@@ -48,6 +48,15 @@ def get_input():
             guess_column = int(input("Guess Column (integer): "))
             return[guess_row, guess_column]
         except ValueError:
-            print("I'm sure you meant to type a number, so please enter a damned number!")
+            print("I'm sure you meant to type a number, so please enter a damned number!!")
 
 get_input()
+
+def check_input(guess):
+    guess_row, guess_column = guess
+    if [guess_row, guess_column] in ships:
+        print("Congrats! You've sunk a bloody battleship! How did you do that?!?")
+        grid[guess_row][guess_column] = 'X'
+        return True
+    else:
+        print("Pathetic! you've missed!")
