@@ -15,8 +15,8 @@ grid = []
 for i in range(playground):
     row = []
     for a in range(playground):
-    row.append('-')
-grid.append(row)
+        row.append('-')
+    grid.append(row)
 
 """
 Function to start the game grid
@@ -50,7 +50,6 @@ def get_input():
         except ValueError:
             print("I'm sure you meant to type a number, so please enter a damned number!!")
 
-get_input()
 
 def check_input(guess):
     guess_row, guess_column = guess
