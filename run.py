@@ -14,7 +14,7 @@ Creating the grid for the game
 grid = []
 for i in range(playground):
     row = []
-for a in range(playground):
+    for a in range(playground):
     row.append('-')
 grid.append(row)
 
@@ -23,7 +23,7 @@ Function to start the game grid
 """
 def game_grid():
     for i in range(playground):
-        for a in range(plaground):
+        for a in range(playground):
             grid[i][a] = '_'
 
 """
@@ -60,3 +60,18 @@ def check_input(guess):
         return True
     else:
         print("Pathetic! you've missed!")
+
+def play_game():
+    game_grid()
+    position()
+    print_grid()
+    num_guesses = 0
+    while True:
+        guess = get_input()
+        num_guesses += 1
+        if check_input(guess):
+            print(f"It took you {num_guesses} to sink all battleships! You're a genius!")
+            break
+        print_grid()
+
+play_game()
