@@ -34,7 +34,7 @@ def print_grid():
         print(''.join(row))
 
 """
-Function to place the ships on the grid
+Function to place the ships on player's grid
 """
 def position():
     for i in range(nums_ships):
@@ -43,6 +43,16 @@ def position():
         ships.append([ship_row, ship_column])
         grid[ship_row][ship_column] = 'O'
 
+
+"""
+Function to place ships on the computer's grid
+"""
+def computer(): 
+    for i in range(nums_ships):
+        ship_row = random.randint(0, playground - 1)
+        ship_column = random.randint(0, playground - 1)
+        ships.append([ship_row, ship_column])
+        grid[ship_row][ship_column] = 'O'
 
 """
 Function to get the player's guesses 
