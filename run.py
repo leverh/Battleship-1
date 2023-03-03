@@ -42,8 +42,12 @@ def position():
         grid[ship_row][ship_column] = 'X'
 
 def get_input():
-    guess_row = int(input("Guess row: "))
-    guess_column = int(input("Guess Column: "))
-    return[guess_row, guess_column]
+    while True:
+        try:
+            guess_row = int(input("Guess row (integer): "))
+            guess_column = int(input("Guess Column (integer): "))
+            return[guess_row, guess_column]
+        except ValueError:
+            print("I'm sure you meant to type a number, so please enter a damned number!")
 
 get_input()
