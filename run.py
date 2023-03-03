@@ -37,7 +37,7 @@ def print_grid():
 """
 Function to place the ships on player's grid
 """
-def position():
+def player_position_ships():
     for i in range(nums_ships):
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
@@ -48,7 +48,7 @@ def position():
 """
 Function to place ships on the computer's grid
 """
-def computer(): 
+def computer_position_ships(): 
     for i in range(nums_ships):
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
