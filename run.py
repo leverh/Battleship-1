@@ -81,7 +81,7 @@ def get_player_input():
             guess_column = int(input("Please guess column (numbers 1  to 5): \n"))
             return [guess_row - 1, guess_column - 1]
         except ValueError:
-            print("Please enter a number between 1 and 10")
+            print("Please enter a number between 1 and 5")
 
 
 """
