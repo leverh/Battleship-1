@@ -143,7 +143,6 @@ template literals to inform player of state of game and win message
 
 
 def play_game():
-    game_grid()
     player_position_ships()
     computer_position_ships()
     print_grid()
