@@ -37,10 +37,10 @@ Function to print game grids onto terminal _
 
 
 def game_grid():
+    print("Your grid:        Computer's grid:")
     for i in range(playground):
-        for a in range(playground):
-            player_grid[i][a] = '_'
-
+        print(''.join(player_grid[i]) + '             ' + ''.join(computer_grid_hidden_ships[i]))
+        
 
 
 """
