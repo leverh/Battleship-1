@@ -156,10 +156,11 @@ def play_game():
                 break
         else:
             computer_guess_location = computer_guess()
+            check_computer_guess(computer_guess_location)
             if not player_ships:
                 print(f"The computer sunk all of your ships in {num_guesses} turns! You lose!")
                 break
-            check_computer_guess(computer_guess_location)
+            
             print(f"The computer guessed row {computer_guess_location[0] + 1} and column {computer_guess_location[1] + 1}")
         print_grid()
 
