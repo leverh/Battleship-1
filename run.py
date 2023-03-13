@@ -122,11 +122,11 @@ def check_player_input(guess):
     if [guess_row, guess_column] in computer_ships:
         print("Congrats! You've sunk a bloody battleship! How did you do that?!?")
         computer_ships.remove([guess_row, guess_column])
-        player_grid[guess_row][guess_column] = 'X'
+        computer_grid_hidden_ships[guess_row][guess_column] = 'X'
         return True
     else:
         print("Pathetic! you've missed!")
-        computer_grid[guess_row][guess_column] = 'M'
+        computer_grid_hidden_ships[guess_row][guess_column] = 'M'
 
 
 """
