@@ -76,7 +76,6 @@ def computer_position_ships():
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
         computer_ships.append([ship_row, ship_column])
-    
 
 
 """
@@ -105,6 +104,7 @@ def computer_guess():
     while True:
         guess_row = random.randint(0, playground - 1)
         guess_column = random.randint(0, playground - 1)
+        #See if the computer guessed these positions before, if not then it can try out these positions
         if [guess_row, guess_column] not in computer_guesses:
             break
     computer_guesses.append([guess_row, guess_column])
