@@ -14,6 +14,24 @@ def type_slow(str):
         sys.stdout.flush()
         time.sleep(0.1)
 
+
+"""
+Battleship pattern using *
+"""
+
+B = ["***",     "*  *",     "*  *",     "***",     "*  *",     "*  *",     "***"]
+A = [" *** ",     "*   *",     "*   *",     "*****",     "*   *",     "*   *",     "*   *"]
+T = ["*****",     "  *  ",     "  *  ",     "  *  ",     "  *  ",     "  *  ",     "  *  "]
+L = ["*    ",     "*    ",     "*    ",     "*    ",     "*    ",     "*    ",     "*****"]
+E = ["*****",     "*    ",     "*    ",     "*****",     "*    ",     "*    ",     "*****"]
+S = ["*****",     "*    ",     "*    ",     "*****",     "    *",     "    *",     "*****"]
+H = ["*  *",     "*  *",     "*  *",     "****",     "*  *",     "*  *",     "*  *"]
+I = ["*****",     "  *  ",     "  *  ",     "  *  ",     "  *  ",     "  *  ",     "*****"]
+P = ["**** ",     "*  * ",     "*  * ",     "**** ",     "*    ",     "*    ",     "*    "]
+
+word = [B, A, T, T, L, E, S, H, I, P, S]
+
+
 """
 Global Variables:
 playground: the size of the game grid
@@ -181,7 +199,10 @@ def play_game():
 """
 Calling the main game function to start the game
 """
-
+for i in range(7):
+    for j in range(len(word)):
+        print(word[j][i], end="  ")
+    print()
 type_slow("\033[1;35;40m Welcome to the competition of your life! \n")
 play_game()
 
