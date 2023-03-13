@@ -1,5 +1,18 @@
 import random
+import time
+import sys
 
+
+
+
+"""
+To creates a slow typing effect
+"""
+def type_slow(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.1)
 
 """
 Global Variables:
@@ -169,7 +182,7 @@ def play_game():
 Calling the main game function to start the game
 """
 
-print("Welcome to the competition of your life! \n")
+type_slow("\033[1;35;40m Welcome to the competition of your life! \n")
 play_game()
 
 
