@@ -169,5 +169,5 @@ def play_game():
 Calling the main game function to start the game
 """
 
-
+print("Welcome to the competition of your life! \n")
 play_game()
