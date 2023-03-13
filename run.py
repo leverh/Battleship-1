@@ -42,16 +42,6 @@ def game_grid():
             player_grid[i][a] = '_'
 
 
-"""
-Function to initialize the computers's game grid with underscores
-"""
-
-
-def computer_game_grid():
-    for i in range(playground):
-        for a in range(playground):
-            computer_grid[i][a] = '_'
-
 
 """
 Function to print the game grid onto terminal
@@ -86,7 +76,7 @@ def computer_position_ships():
         ship_row = random.randint(0, playground - 1)
         ship_column = random.randint(0, playground - 1)
         computer_ships.append([ship_row, ship_column])
-        computer_grid[ship_row][ship_column] = 'O'
+    
 
 
 """
