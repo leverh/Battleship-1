@@ -9,7 +9,7 @@ player_ships: a list for player's ships
 computer_ships: a list for the computer's ships
 computer guesses: to store the position of the computer's guesses
 """
-playground = 10
+playground = 5
 nums_ships = 5
 player_ships = []
 computer_ships = []
@@ -18,18 +18,18 @@ computer_guesses = []
 """
 Creating the grid for the game
 player_grid: list of list to store player's game grid
-computer_grid: list of lists to store the computer's grid
+computer_grid_hidden_ships: list of lists to show where the player hit or missed
 """
 player_grid = []
-computer_grid = []
+computer_grid_hidden_ships = []
 for i in range(playground):
     player_row = []
-    computer_row = []
+    computer_row_hidden_ships = []
     for a in range(playground):
-        player_row.append('-')
-        computer_row.append('-')
+        player_row.append('_')
+        computer_row_hidden_ships.append('_')
     player_grid.append(player_row)
-    computer_grid.append(computer_row)
+    computer_grid_hidden_ships.append(computer_row_hidden_ships)
 
 """
 Function to initialize the player's game grid with empty spaces - the underscores _
