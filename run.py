@@ -77,8 +77,8 @@ list will contain the row and column of guess
 def get_player_input():
     while True:
         try:
-            guess_row = int(input("Guess row (numbers 1  to 10): \n"))
-            guess_column = int(input("Guess Column (numbers 1  to 10): \n"))
+            guess_row = int(input("Please guess row (numbers 1  to 5): \n"))
+            guess_column = int(input("Please guess column (numbers 1  to 5): \n"))
             return [guess_row - 1, guess_column - 1]
         except ValueError:
             print("Please enter a number between 1 and 10")
@@ -171,3 +171,5 @@ Calling the main game function to start the game
 
 print("Welcome to the competition of your life! \n")
 play_game()
+
+
