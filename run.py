@@ -32,7 +32,7 @@ for i in range(playground):
     computer_grid_hidden_ships.append(computer_row_hidden_ships)
 
 """
-Function to initialize the player's game grid with empty spaces - the underscores _
+Function to print game grids onto terminal _
 """
 
 
