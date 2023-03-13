@@ -44,16 +44,6 @@ def game_grid():
 
 
 """
-Function to print the game grid onto terminal
-"""
-
-
-def print_grid():
-    for row in player_grid:
-        print(''.join(row))
-
-
-"""
 Function that randomly positions player's ships on grid and mark the positions with a circle (or rather, a capital O)
 """
 
