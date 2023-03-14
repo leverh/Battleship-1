@@ -110,7 +110,10 @@ def get_player_input():
         try:
             guess_row = int(input("Please guess row (numbers 1  to 5): \n"))
             guess_column = int(input("Please guess column (numbers 1  to 5): \n"))
-            return [guess_row - 1, guess_column - 1]
+            if guess_row < 1 or guess_row > 5 or guess_column < 1 or guess_column > 5:
+                print("Your chosen numbers were out of the specified range \n")
+            else:
+                return [guess_row - 1, guess_column - 1]
         except ValueError:
             print("Please enter a number between 1 and 5")
 
