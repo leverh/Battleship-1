@@ -71,7 +71,7 @@ for i in range(playground):
     computer_grid_hidden_ships.append(computer_row_hidden_ships)
 
 """
-Function to print game grids onto terminal _
+Function to print game grids onto terminal
 """
 
 
@@ -118,13 +118,17 @@ def get_player_input():
     while True:
         try:
             guess_row = int(input("Please guess row (numbers 1  to 5): \n"))
-            guess_column = int(input("Please guess column (numbers 1  to 5): \n"))
-            if guess_row < 1 or guess_row > 5 or guess_column < 1 or guess_column > 5:
-                print("Your chosen numbers were out of the specified range \n")
+            if guess_row < 1 or guess_row > 5:
+                print("Your chosen numbers were out of the specified range 1-5 \n")
             else:
-                return [guess_row - 1, guess_column - 1]
+                break
         except ValueError:
-            print("Please enter a number between 1 and 5")
+            print("Your chosen numbers were out of the specified range 1-5 \n")
+    while True:
+        try:
+            column = input("Please guess column (letters A-E): \n").upper()
+            if column not in 'ABCDE':
+                print("Your chosen letter was out of the specified range A-E \n")
 
 
 """
