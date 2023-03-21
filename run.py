@@ -39,12 +39,20 @@ nums_ships: number of ships on the grid
 player_ships: a list for player's ships
 computer_ships: a list for the computer's ships
 computer guesses: to store the position of the computer's guesses
+col_numbers: a dictionary to translate the column coordinates into numbers
 """
 playground = 5
 nums_ships = 5
 player_ships = []
 computer_ships = []
 computer_guesses = []
+col_numbers = {
+    'A': 0,
+    'B': 1,
+    'C': 2,
+    'D': 3,
+    'E': 4
+}
 
 """
 Creating the grid for the game
