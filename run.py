@@ -134,7 +134,7 @@ def get_player_input():
                 break
         except KeyError:
                 print("Your chosen letter was out of the specified range (A-E) \n")
-        return[guess_row - 1, guess_column]
+    return[guess_row - 1, guess_column]
 
 
 
@@ -169,7 +169,7 @@ def check_player_input(guess):
         computer_grid_hidden_ships[guess_row][guess_column] = 'X'
         return True
     else:
-        print("Pathetic! you've missed!")
+        print("Pathetic! You've missed!")
         computer_grid_hidden_ships[guess_row][guess_column] = 'M'
 
 
