@@ -1,31 +1,68 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships - Python based game
 
-Welcome leverh,
+![Screenshot image of the Battleships game terminal on Heroku](/ASSETS/Images/Screenshot%202023-03-21%20at%2011-55-39%20Python%20Terminal%20by%20Code%20Institute.png)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Battleships is a turn based grid game that runs on Heroku, in which the player plays against the computer.
 
-## Reminders
+[Click here to play to game on Heroku](https://battleappli.herokuapp.com/).
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+# Game play
 
-## Creating the Heroku app
+This is a turn-based game of battleships using Python 3. The games lets the human player guess the position of the computer's hidden ships on a 5x5 grid. Similarily, the computer will try to guess the positions of the player's ships. The aim is to eliminate all ships from the board. 
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## How to play the game
 
-1. `heroku/python`
-2. `heroku/nodejs`
+To start the game, you will need to run the run.py file in your Python supported code editor (I used Visual Studio Code, Gitpod, and Heroku), or simply [click this link](https://battleappli.herokuapp.com/). The game will then start and prompt the player to guess where the computer has its ships on the grid.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Winning the game
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The game will be won once all ships (either the computer's or the player's) have been eliminated.
 
-Connect your GitHub repository and deploy as normal.
+# The system
 
-## Constraints
+- The game grid is a 5x5 grid, with rows numbered from 1-5 and columns with the letters A-E. Since the code for the grid is pretty straight forward, it should be easy to increase or decrease the grid if I felt that it was needed. 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+- At the start of the game, the players 5 ships are randomly positioned on the grid, and their positions are marked with a capital 'O'. The computer's five ships are also randomly positioned, but their locations are not shown to the player.
 
------
-Happy coding!
+- On each turn, the player will enter their guess for a row and column to target. The player will first enter the row number (between 1-5), and then enter the column letter (between A-E). Should the player enter a number or letter that is out of the given range, they are  given an error message requesting them to re-enter their input.
+
+- After the player enters their guess, the computer will also make a guess for a row and column to target. The computer's guess will be randomly generated.
+
+- If the player's guess hits one of the computer's ships, the player will see an 'X' on the computer's grid where the ship was hit. If the player's guess misses, the player will see a 'M' on the computer's grid.
+
+- If the computer's guess hits one of the player's ships, the player will see an 'X' on their own grid where the ship was hit. If the computer's guess misses, the player will see a 'M' on their own grid.
+
+- The game will continue until either all of the computer's ships are sunk (i.e., hit by the player) or all of the player's ships are sunk (i.e., hit by the computer).
+
+- If the player wins, a victory message will be displayed. If the computer wins, a loss message will be displayed.
+
+# Technologies
+
+## Language
+
+- Python
+
+## Frameworks, environments, and programs used
+
+- __Gitpod__ 
+    - Writing the code and using the terminal to test and play the game
+- __Visual Studio Code__
+    - Writing the code and using the terminal for testing and manipulating the code
+- __GitHub__
+    - Version control
+- __Heroku__
+    - Deployment
+
+## Libraries/ Modules
+
+- [random](https://docs.python.org/3/library/random.html) - Generate pseudo-random numbers 
+
+- [time](https://docs.python.org/3/library/time.html) - Time access and conversions
+
+- [sys](https://docs.python.org/3/library/sys.html) - System-specific parameters and functions
+
+# Credits
+
+- Code institute Gitpod Template
+- [Ozzmaker](https://ozzmaker.com/) - for [Color in Python code](https://ozzmaker.com/add-colour-to-text-in-python/)
+
