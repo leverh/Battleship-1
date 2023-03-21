@@ -233,7 +233,7 @@ for i in range(7):
     for j in range(len(word)):
         print(word[j][i], end="  ")
     print()
-type_slow("\033[1;35;40m Welcome to the competition of your life! \n")
+type_slow("\033[1;35;40m WELCOME TO THE GAME OF YOUR LIFE! \n")
 type_faster("Gameplay: \n")
 type_faster("The objective of the game is to guess the location of the ships on the grid before the computer finds and sinks all of your ships \n")
 type_faster("The game will continue until all of the computer's ships have been sunk, or until the computer has sunk all of your ships. Good luck! \n")
