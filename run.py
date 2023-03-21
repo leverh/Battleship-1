@@ -77,8 +77,9 @@ Function to print game grids onto terminal _
 
 def print_grid():
     print("Your grid:        Computer's grid:")
+    print("  A B C D E           A B C D E")
     for i in range(playground):
-        print(''.join(player_grid[i]) + '             ' + ''.join(computer_grid_hidden_ships[i]))
+        print(str(i) + '|' + '|'.join(player_grid[i]) + '|        ' + str(i) + '|' + '|'.join(computer_grid_hidden_ships[i])+ '|')
         
 
 
