@@ -14,7 +14,14 @@ def type_slow(str):
         sys.stdout.flush()
         time.sleep(0.1)
 
-
+"""
+To create a faster typing effect
+"""
+def type_faster(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.05)
 """
 Battleship pattern using *
 """
@@ -227,6 +234,9 @@ for i in range(7):
         print(word[j][i], end="  ")
     print()
 type_slow("\033[1;35;40m Welcome to the competition of your life! \n")
+type_faster("Gameplay: \n")
+type_faster("The objective of the game is to guess the location of the ships on the grid before the computer finds and sinks all of your ships \n")
+type_faster("The game will continue until all of the computer's ships have been sunk, or until the computer has sunk all of your ships. Good luck! \n")
 play_game()
 
 
