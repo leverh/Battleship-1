@@ -23,7 +23,7 @@ def type_faster(str):
         sys.stdout.flush()
         time.sleep(0.05)
 """
-Battleship pattern using -
+Battleship ASCII pattern using -
 """
 
 def print_ascii_art():
@@ -170,12 +170,12 @@ True if the guess is a hit and False otherwise
 def check_player_input(guess):
     guess_row, guess_column = guess
     if [guess_row, guess_column] in computer_ships:
-        print("Congrats! You've sunk a bloody battleship! How did you do that?!?")
+        print("Congrats! You've sunk a bloody battleship! How did you do that?!? \n")
         computer_ships.remove([guess_row, guess_column])
         computer_grid_hidden_ships[guess_row][guess_column] = 'X'
         return True
     else:
-        print("Pathetic! You've missed!")
+        print("Pathetic! You've missed! \n")
         computer_grid_hidden_ships[guess_row][guess_column] = 'M'
 
 
@@ -187,14 +187,25 @@ check if the computer's guess is a hit or not and update the game grid
 def check_computer_guess(guess):
     guess_row, guess_column = guess
     if [guess_row, guess_column] in player_ships:
-        print("Oh noes! The computer has sunk one of your battleships!")
+        print("Oh noes! The computer has sunk one of your battleships! \n")
         player_ships.remove([guess_row, guess_column])
         player_grid[guess_row][guess_column] = 'X'
     else:
-        print("Lucky! The computer missed!")
+        print("Lucky! The computer missed! \n")
         player_grid[guess_row][guess_column] = 'M'
     
 
+
+"""
+Function containing game instructions
+"""
+def print_instructions():
+    type_faster("To win the game, you need to sink all of the computer's battleships. \n\n")
+    type_faster("Unfortunately for you, you don't exactly know where the ships are hidden on its grid. \n\n")
+    type_faster("You will need to make guesses and destroy all the ships")
+    type_faster(" as quickly as possible... \n\n")
+    type_faster("Hurry, because while you are attacking its ships, yours are also being attacked! \n\n")
+    type_faster("Good luck! \n\n")
 
 """
 Function to start the main game and alternate turns until player or computer finish sinking all ships
@@ -226,13 +237,22 @@ def play_game():
 
 
 """
-Calling the main game function to start the game
+Calling: 1. The ASCII function to print name of game
+         2. The prompt to ask player whether they would like the instructions for the game
+         3. The main game function to start the game
 """
 print_ascii_art()
-type_slow("\033[1;35;40m WELCOME TO THE GAME OF YOUR LIFE! \n")
-type_faster("Gameplay: \n")
-type_faster("The objective of the game is to guess the location of the ships on the grid before the computer finds and sinks all of your ships \n")
-type_faster("The game will continue until all of the computer's ships have been sunk, or until the computer has sunk all of your ships. Good luck! \n")
+type_slow("\033[1;35;40m WELCOME TO THE GAME OF YOUR LIFE! \n\n\n")
+
+while True:
+    instructions_prompt = input("Would you like to read the game instructions? (yes or no): \n")
+    if instructions_prompt.lower() == 'yes':
+        print_instructions()
+        break
+    elif instructions_prompt.lower() == 'no':
+        break
+    else:
+        print("Invalid input. Please enter 'yes' or 'no'.")
 play_game()
 
 
