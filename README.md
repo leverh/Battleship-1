@@ -1,6 +1,6 @@
 # Battleships - Python based game
 
-![Screenshot image of the Battleships game terminal on Heroku](/ASSETS/Images/Screenshot%202023-03-21%20at%2011-55-39%20Python%20Terminal%20by%20Code%20Institute.png)
+![Screenshot image of the Battleships game terminal on Heroku](/ASSETS/Images/Screenshot%202023-03-22%20at%2011-37-55%20Python%20Terminal%20by%20Code%20Institute.png)
 
 Battleships is a turn based grid game that runs on Heroku, in which the player plays against the computer.
 
@@ -22,9 +22,9 @@ The game will be won once all ships (either the computer's or the player's) have
 
 - The game grid is a 5x5 grid, with rows numbered from 1-5 and columns with the letters A-E. Since the code for the grid is pretty straight forward, it should be easy to increase or decrease the grid if I felt that it was needed. 
 
-- At the start of the game, the players 5 ships are randomly positioned on the grid, and their positions are marked with a capital 'O'. The computer's five ships are also randomly positioned, but their locations are not shown to the player.
+- At the start of the game, the player's 5 ships are randomly positioned on the grid, and their positions are marked with a capital 'O'. The computer's five ships are also randomly positioned, but their locations are not shown to the player.
 
-- On each turn, the player will enter their guess for a row and column to target. The player will first enter the row number (between 1-5), and then enter the column letter (between A-E). Should the player enter a number or letter that is out of the given range, they are  given an error message requesting them to re-enter their input.
+- On each turn, the player will enter their guess for a row and column to target. The player will first enter the row number (between 1-5), and then enter the column letter (between A-E). Should the player enter a number or letter that is out of the given range, they will be given an error message requesting them to re-enter their input.
 
 - After the player enters their guess, the computer will also make a guess for a row and column to target. The computer's guess will be randomly generated.
 
@@ -40,7 +40,7 @@ The game will be won once all ships (either the computer's or the player's) have
 
 ## Language
 
-- Python
+- Python 3
 
 ## Frameworks, environments, and programs used
 
@@ -61,8 +61,28 @@ The game will be won once all ships (either the computer's or the player's) have
 
 - [sys](https://docs.python.org/3/library/sys.html) - System-specific parameters and functions
 
+# Testing
+
+Every step of the code was tested using: 
+- print statements  
+- by trying to run the code over and over again until every little bug was fixed. 
+- certain processes were also checked on the [Python Tutor](https://pythontutor.com/python-debugger.html#mode=edit) website 
+- tests on [Jupyter](https://jupyter.org/) - which i discovered to be very valuable.
+- I also used __Visual Studio Code__  (not in GitPod) to check my code and re-write it over and over again. I ended up with 9 versions of the files (run.py, run1.py, run2.py, run3.py etc.)- reduced slowly to 6 with every step of the way and every change I made
+
+
+I started off with 258 issues found on [CI's Python Linter](https://pep8ci.herokuapp.com/)
+
+![screenshot of validator result](/ASSETS/Images/Screenshot%202023-03-22%20at%2012-03-52%20CI%20Python%20Linter.png)
+
+And the result after having dealt with most issues: 
+
+
+
+
 # Credits
 
 - Code institute Gitpod Template
 - [Ozzmaker](https://ozzmaker.com/) - for [Color in Python code](https://ozzmaker.com/add-colour-to-text-in-python/)
+- [Patorjk](https://patorjk.com/) - for the ASCII artwork
 
