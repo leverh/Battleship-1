@@ -2,29 +2,34 @@ import random
 import time
 import sys
 
-
-
-
 """
 To creates a slow typing effect
 """
+
+
 def type_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.1)
 
+
 """
 To create a faster typing effect
 """
+
+
 def type_faster(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.05)
+
+
 """
 Battleship ASCII pattern using -
 """
+
 
 def print_ascii_art():
     print("\033[95m ____        _   _   _           _     _           \033[0m")
@@ -37,7 +42,6 @@ def print_ascii_art():
     print("\033[95m                                         |_|        \033[0m")
 
 
-
 """
 Global Variables:
 playground: the size of the game grid
@@ -47,6 +51,8 @@ computer_ships: a list for the computer's ships
 computer guesses: to store the position of the computer's guesses
 col_numbers: a dictionary to translate the column coordinates into numbers
 """
+
+
 playground = 5
 nums_ships = 5
 player_ships = []
@@ -60,11 +66,15 @@ col_numbers = {
     'E': 4
 }
 
+
 """
 Creating the grid for the game
-player_grid: list of list to store player's game grid
-computer_grid_hidden_ships: list of lists to show where the player hit or missed
+player_grid: list of lists to store player's game grid
+computer_grid_hidden_ships: list of lists to show where
+the player hit or missed
 """
+
+
 player_grid = []
 computer_grid_hidden_ships = []
 for i in range(playground):
@@ -76,6 +86,7 @@ for i in range(playground):
     player_grid.append(player_row)
     computer_grid_hidden_ships.append(computer_row_hidden_ships)
 
+
 """
 Function to print game grids onto terminal
 """
@@ -85,12 +96,13 @@ def print_grid():
     print("Your grid:        Computer's grid:")
     print("  A B C D E           A B C D E")
     for i in range(playground):
-        print(str(i+1) + '|' + '|'.join(player_grid[i]) + '|        ' + str(i+1) + '|' + '|'.join(computer_grid_hidden_ships[i])+ '|')
-        
+        print(str(i + 1) + '|' + '|'.join(player_grid[i]) + '|        ' +
+      str(i + 1) + '|' + '|'.join(computer_grid_hidden_ships[i]) + '|')
 
 
 """
-Function that randomly positions player's ships on grid and mark the positions with a circle (or rather, a capital O)
+Function that randomly positions player's ships on grid
+and mark the positions with a circle (or rather, a capital O)
 """
 
 
@@ -103,7 +115,8 @@ def player_position_ships():
 
 
 """
-Function that randomly positions the computer's ships on grid and mark the positions with a circle (or rather, a capital O)
+Function that randomly positions the computer's ships on grid
+and mark the positions with a circle (or rather, a capital O)
 """
 
 
@@ -115,7 +128,8 @@ def computer_position_ships():
 
 
 """
-Function to prompt the player to enter row and column of choice and return them as a list
+Function to prompt the player to enter row and
+column of choice and return them as a list
 list will contain the row and column of guess
 """
 
@@ -125,7 +139,8 @@ def get_player_input():
         try:
             guess_row = int(input("Please guess row (numbers 1  to 5): \n"))
             if guess_row < 1 or guess_row > 5:
-                print("Your chosen numbers were out of the specified range (1-5) \n")
+                print("Your chosen numbers were out"
+                " of the specified range (1-5) \n")
             else:
                 break
         except ValueError:
@@ -134,19 +149,20 @@ def get_player_input():
         try:
             column = input("Please guess column (letters A-E): \n").upper()
             if column not in 'ABCDE':
-                print("Your chosen letter was out of the specified range (A-E) \n")
+                print("Your chosen letter was out of"
+                " the specified range (A-E) \n")
             else:
                 guess_column = col_numbers[column]
                 break
         except KeyError:
-                print("Your chosen letter was out of the specified range (A-E) \n")
-    return[guess_row - 1, guess_column]
-
+            print("Your chosen letter was out of the specified range (A-E) \n")
+    return [guess_row - 1, guess_column]
 
 
 """
-Randomly generate the computer's choice in a list of rows and columns.
-list will contain the row and column of guess
+Randomly generate the computer's choice in a
+list of rows and columns.list will contain the
+row and column of guess
 """
 
 
@@ -154,7 +170,8 @@ def computer_guess():
     while True:
         guess_row = random.randint(0, playground - 1)
         guess_column = random.randint(0, playground - 1)
-        #See if the computer guessed these positions before, if not then it can try out these positions
+        # See if the computer guessed these positions before,
+        # if not then it can try out these positions
         if [guess_row, guess_column] not in computer_guesses:
             break
     computer_guesses.append([guess_row, guess_column])
@@ -162,7 +179,8 @@ def computer_guess():
 
 
 """
-Function that checks if the player's guess is a hit or a miss and update the game grid
+Function that checks if the player's guess is
+a hit or a miss and update the game grid
 True if the guess is a hit and False otherwise
 """
 
@@ -170,7 +188,8 @@ True if the guess is a hit and False otherwise
 def check_player_input(guess):
     guess_row, guess_column = guess
     if [guess_row, guess_column] in computer_ships:
-        print("Congrats! You've sunk a bloody battleship! How did you do that?!? \n")
+        print("Congrats! You've sunk a bloody battleship!"
+        " How did you do that?!? \n")
         computer_ships.remove([guess_row, guess_column])
         computer_grid_hidden_ships[guess_row][guess_column] = 'X'
         return True
@@ -180,7 +199,8 @@ def check_player_input(guess):
 
 
 """
-check if the computer's guess is a hit or not and update the game grid
+check if the computer's guess is a hit or not
+and update the game grid
 """
 
 
@@ -193,22 +213,28 @@ def check_computer_guess(guess):
     else:
         print("Lucky! The computer missed! \n")
         player_grid[guess_row][guess_column] = 'M'
-    
 
 
 """
 Function containing game instructions
 """
+
+
 def print_instructions():
-    type_faster("To win the game, you need to sink all of the computer's battleships. \n\n")
-    type_faster("Unfortunately for you, you don't exactly know where the ships are hidden on its grid. \n\n")
+    type_faster("To win the game, you need to sink all"
+    " of the computer's battleships. \n\n")
+    type_faster("Unfortunately for you, you don't exactly know"
+    " where the ships are hidden on its grid. \n\n")
     type_faster("You will need to make guesses and destroy all the ships")
     type_faster(" as quickly as possible... \n\n")
-    type_faster("Hurry, because while you are attacking its ships, yours are also being attacked! \n\n")
+    type_faster("Hurry, because while you are attacking its" 
+    " ships, yours are also being attacked! \n\n")
     type_faster("Good luck! \n\n")
 
+
 """
-Function to start the main game and alternate turns until player or computer finish sinking all ships
+Function to start the main game and alternate
+turns until player or computer finish sinking all ships
 template literals to inform player of state of game and win message
 """
 
@@ -231,21 +257,24 @@ def play_game():
             if not player_ships:
                 print(f"The computer sunk all of your ships in {num_guesses} turns! You lose!")
                 break
-            
             print(f"The computer guessed row {computer_guess_location[0] + 1} and column {computer_guess_location[1] + 1}")
         print_grid()
 
 
 """
 Calling: 1. The ASCII function to print name of game
-         2. The prompt to ask player whether they would like the instructions for the game
+         2. The prompt to ask player whether they would
+         like the instructions for the game
          3. The main game function to start the game
 """
+
+
 print_ascii_art()
 type_slow("\033[1;35;40m WELCOME TO THE GAME OF YOUR LIFE! \n\n\n")
 
 while True:
-    instructions_prompt = input("Would you like to read the game instructions? (yes or no): \n")
+    instructions_prompt = input("Would you like to read the game instructions? "
+    "(yes or no): \n")
     if instructions_prompt.lower() == 'yes':
         print_instructions()
         break
@@ -254,5 +283,3 @@ while True:
     else:
         print("Invalid input. Please enter 'yes' or 'no'.")
 play_game()
-
-
