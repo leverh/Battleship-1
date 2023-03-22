@@ -23,20 +23,19 @@ def type_faster(str):
         sys.stdout.flush()
         time.sleep(0.05)
 """
-Battleship pattern using *
+Battleship pattern using -
 """
 
-B = ["***",     "*  *",     "*  *",     "***",     "*  *",     "*  *",     "***"]
-A = [" *** ",     "*   *",     "*   *",     "*****",     "*   *",     "*   *",     "*   *"]
-T = ["*****",     "  *  ",     "  *  ",     "  *  ",     "  *  ",     "  *  ",     "  *  "]
-L = ["*    ",     "*    ",     "*    ",     "*    ",     "*    ",     "*    ",     "*****"]
-E = ["*****",     "*    ",     "*    ",     "*****",     "*    ",     "*    ",     "*****"]
-S = ["*****",     "*    ",     "*    ",     "*****",     "    *",     "    *",     "*****"]
-H = ["*  *",     "*  *",     "*  *",     "****",     "*  *",     "*  *",     "*  *"]
-I = ["*****",     "  *  ",     "  *  ",     "  *  ",     "  *  ",     "  *  ",     "*****"]
-P = ["**** ",     "*  * ",     "*  * ",     "**** ",     "*    ",     "*    ",     "*    "]
+def print_ascii_art():
+    print("\033[95m ____        _   _   _           _     _           \033[0m")
+    print("\033[95m|  _ \      | | | | | |         | |   (_)          \033[0m")
+    print("\033[95m| |_) | __ _| |_| |_| | ___  ___| |__  _ _ __  ___\033[0m")
+    print("\033[95m|  _ < / _` | __| __| |/ _ \/ __| '_ \| | '_ \/ __|\033[0m")
+    print("\033[95m| |_) | (_| | |_| |_| |  __/\__ \ | | | | |_) \__ \\\033[0m")
+    print("\033[95m|____/ \__,_|\__|\__|_|\___||___/_| |_|_| .__/|___/\033[0m")
+    print("\033[95m                                         | |        \033[0m")
+    print("\033[95m                                         |_|        \033[0m")
 
-word = [B, A, T, T, L, E, S, H, I, P, S]
 
 
 """
@@ -86,7 +85,7 @@ def print_grid():
     print("Your grid:        Computer's grid:")
     print("  A B C D E           A B C D E")
     for i in range(playground):
-        print(str(i) + '|' + '|'.join(player_grid[i]) + '|        ' + str(i) + '|' + '|'.join(computer_grid_hidden_ships[i])+ '|')
+        print(str(i+1) + '|' + '|'.join(player_grid[i]) + '|        ' + str(i+1) + '|' + '|'.join(computer_grid_hidden_ships[i])+ '|')
         
 
 
@@ -213,7 +212,7 @@ def play_game():
         num_guesses += 1
         if check_player_input(guess):
             if not computer_ships:
-                print(f"It took you {num_guesses} to sink all battleships! you're a genius!")
+                print(f"It took you {num_guesses} turns to sink all battleships! you're a genius!")
                 break
         else:
             computer_guess_location = computer_guess()
@@ -229,10 +228,7 @@ def play_game():
 """
 Calling the main game function to start the game
 """
-for i in range(7):
-    for j in range(len(word)):
-        print(word[j][i], end="  ")
-    print()
+print_ascii_art()
 type_slow("\033[1;35;40m WELCOME TO THE GAME OF YOUR LIFE! \n")
 type_faster("Gameplay: \n")
 type_faster("The objective of the game is to guess the location of the ships on the grid before the computer finds and sinks all of your ships \n")
