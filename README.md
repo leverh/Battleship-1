@@ -77,7 +77,7 @@ I started off with 258 issues found on [CI's Python Linter](https://pep8ci.herok
 
 And the result after having dealt with most issues: 
 
-
+![screenshot of validator result](/ASSETS/Images/Screenshot%202023-03-22%20at%2016-49-54%20CI%20Python%20Linter.png)
 
 
 # Credits
@@ -85,4 +85,4 @@ And the result after having dealt with most issues:
 - Code institute Gitpod Template
 - [Ozzmaker](https://ozzmaker.com/) - for [Color in Python code](https://ozzmaker.com/add-colour-to-text-in-python/)
 - [Patorjk](https://patorjk.com/) - for the ASCII artwork
-
+- [Python 3.11.2 documentation](https://docs.python.org/3/)
