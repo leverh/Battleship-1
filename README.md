@@ -84,6 +84,9 @@ The game will be won once all ships (either the computer's or the player's) have
 ![screenshot of terminal error message requesting user to enter the correct data format](/ASSETS/Images/2023-03-23%20(8).png)
 
 
+# Flowchart of game process
+
+![flowchart graphic of game process](/ASSETS/Images/battleships.png)
 
 # Testing
 
