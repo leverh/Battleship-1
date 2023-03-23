@@ -32,16 +32,16 @@ Battleship ASCII pattern using -
 
 
 def print_ascii_art():
-    print("\033[95m ____        _   _   _           _     _           \033[0m")
-    print("\033[95m|  _ \      | | | | | |         | |   (_)          \033[0m")
-    print("\033[95m| |_) | __ _| |_| |_| | ___  ___| |__  _ _ __  ___\033[0m")
-    print("\033[95m|  _ < / _` | __| __| |/ _ \/ __| '_ \| | '_ \/ __|\033[0m")
-    print("\033[95m| |_) | (_| | |_| |_| |  __/\__ \ | | | "
+    print("\033[32m ____        _   _   _           _     _           \033[0m")
+    print("\033[32m|  _ \      | | | | | |         | |   (_)          \033[0m")
+    print("\033[32m| |_) | __ _| |_| |_| | ___  ___| |__  _ _ __  ___\033[0m")
+    print("\033[32m|  _ < / _` | __| __| |/ _ \/ __| '_ \| | '_ \/ __|\033[0m")
+    print("\033[32m| |_) | (_| | |_| |_| |  __/\__ \ | | | "
           "| |_) \__ \\\033[0m")
-    print("\033[95m|____/ \__,_|\__|\__|_|\___||___/_| |_|_| .__/|___/\033[0m")
-    print("\033[95m                                         | |        "
+    print("\033[32m|____/ \__,_|\__|\__|_|\___||___/_| |_|_| .__/|___/\033[0m")
+    print("\033[32m                                         | |        "
           "\033[0m")
-    print("\033[95m                                         |_|        "
+    print("\033[32m                                         |_|        "
           "\033[0m")
 
 
@@ -281,7 +281,7 @@ Calling: 1. The ASCII function to print name of game
 
 
 print_ascii_art()
-type_slow("\033[1;35;40m WELCOME TO THE GAME OF YOUR LIFE! \n\n\n")
+type_slow("\u001b[32;1m WELCOME TO THE GAME OF YOUR LIFE! \n\n\n")
 
 while True:
     instructions_prompt = input("Would you like to read the game"
