@@ -104,7 +104,7 @@ I started off with 258 issues found on [CI's Python Linter](https://pep8ci.herok
 
 And the result after having dealt with most issues:
 
-![screenshot of validator result](/ASSETS/Images/Screenshot%202023-03-22%20at%2016-49-54%20CI%20Python%20Linter.png)
+![screenshot of validator result](/ASSETS/Images/Screenshot%202023-03-23%20at%2016-26-30%20CI%20Python%20Linter.png)
 
 The issues that remained on the list are to do with the ASCII graphics and not with the pure code in the editor.
 
@@ -122,3 +122,4 @@ Once these issues were sorted out, and throughout the process of building the ga
 - [Ozzmaker](https://ozzmaker.com/) - for [Color in Python code](https://ozzmaker.com/add-colour-to-text-in-python/)
 - [Patorjk](https://patorjk.com/) - for the ASCII artwork
 - [Python 3.11.2 documentation](https://docs.python.org/3/)
+- [Lucid](https://www.lucidchart.com/pages/) - for the flowchart
