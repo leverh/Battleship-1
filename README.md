@@ -69,11 +69,11 @@ The game will be won once all ships (either the computer's or the player's) have
 
 - Allow the player to choose whether they would like to read the instructions for the game:
 
-![screenshot of optional game instructions](/ASSETS/2023-03-23%20(3).png)
+![screenshot of optional game instructions](/ASSETS/Images/2023-03-23%20(3).png)
 
 - Letting the player know how many turns it took them  or the computer to win:
 
-![screenshot of terminal notifying player how many turns it took for them to win](/ASSETS/2023-03-23%20(2).png)
+![screenshot of terminal notifying player how many turns it took for them to win](/ASSETS/Images/2023-03-23%20(2).png)
 
 - Validation in the different stages to make sure the user inputs the correct data type (integars, character, etc.). for exmaple, the instructions require the player to type yes or no- if the wrong or incorrect data type is entered, the user will get an error message as seen in the screenshot below
 
