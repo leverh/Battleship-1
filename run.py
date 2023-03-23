@@ -101,6 +101,7 @@ def print_grid():
     for i in range(playground):
         print(str(i + 1) + '|' + '|'.join(player_grid[i]) + '|        ' +
               str(i + 1) + '|' + '|'.join(computer_grid_hidden_ships[i]) + '|')
+        print()
 
 
 """
