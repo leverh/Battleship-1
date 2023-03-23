@@ -111,8 +111,11 @@ and mark the positions with a circle (or rather, a capital O)
 
 def player_position_ships():
     for i in range(nums_ships):
-        ship_row = random.randint(0, playground - 1)
-        ship_column = random.randint(0, playground - 1)
+        while True:
+            ship_row = random.randint(0, playground - 1)
+            ship_column = random.randint(0, playground - 1)
+            if [ship_row, ship_column] not in player_ships:
+                break
         player_ships.append([ship_row, ship_column])
         player_grid[ship_row][ship_column] = 'O'
 
@@ -125,8 +128,11 @@ and mark the positions with a circle (or rather, a capital O)
 
 def computer_position_ships():
     for i in range(nums_ships):
-        ship_row = random.randint(0, playground - 1)
-        ship_column = random.randint(0, playground - 1)
+        while True:
+            ship_row = random.randint(0, playground - 1)
+            ship_column = random.randint(0, playground - 1)
+            if [ship_row, ship_column] not in computer_ships:
+                break
         computer_ships.append([ship_row, ship_column])
 
 
@@ -255,15 +261,14 @@ def play_game():
                 print(f"It took you {num_guesses} turns to sink all  "
                       f"battleships! you're a genius!")
                 break
-        else:
-            computer_guess_location = computer_guess()
-            check_computer_guess(computer_guess_location)
-            if not player_ships:
-                print(f"The computer sunk all of your ships in {num_guesses} "
-                      f"turns! You lose!")
-                break
-            print(f"The computer guessed row {computer_guess_location[0] + 1} "
-                  f"and column {computer_guess_location[1] + 1}")
+        computer_guess_location = computer_guess()
+        check_computer_guess(computer_guess_location)
+        if not player_ships:
+            print(f"The computer sunk all of your ships in {num_guesses} "
+                  f"turns! You lose!")
+            break
+        print(f"The computer guessed row {computer_guess_location[0] + 1} "
+              f"and column {computer_guess_location[1] + 1}")
         print_grid()
 
 
