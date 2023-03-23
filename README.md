@@ -86,7 +86,7 @@ The game will be won once all ships (either the computer's or the player's) have
 
 # Flowchart of game process
 
-![flowchart graphic of game process](/ASSETS/Images/battleships.png)
+![flowchart graphic of game process](/ASSETS/Images/battleships1(1).png)
 
 # Testing
 
