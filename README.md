@@ -61,6 +61,8 @@ The game will be won once all ships (either the computer's or the player's) have
 
 - [sys](https://docs.python.org/3/library/sys.html) - System-specific parameters and functions
 
+- [colorama](https://pypi.org/project/colorama/) - Cross-platform colored terminal text
+
 # Features
 
 - A welcome message in the form of the game name made out of ASCII graphics.
@@ -75,11 +77,13 @@ The game will be won once all ships (either the computer's or the player's) have
 
 ![screenshot of terminal notifying player how many turns it took for them to win](/ASSETS/Images/2023-03-23%20(11).png)
 
-- Validation in the different stages to make sure the user inputs the correct data type (integars, character, etc.). for exmaple, the instructions require the player to type yes or no- if the wrong or incorrect data type is entered, the user will get an error message as seen in the screenshot below
+- Validation in the different stages to make sure the user inputs the correct data type (integars, character, etc.). for exmaple, the instructions require the player to type yes or no- if the wrong or incorrect data type is entered, the user will get an error message as seen in the screenshot below    
+
 
 ![screenshot of terminal error message requesting the user to enter the correct data type](/ASSETS/Images/2023-03-23%20(12).png)
 
-- Validation when user enters coordinates for ships and an error message when incorrect data is entered:
+- Validation when user enters coordinates for ships and an error message when incorrect data is entered:  
+
 
 ![screenshot of terminal error message requesting user to enter the correct data format](/ASSETS/Images/2023-03-24%20(6).png)
 
@@ -119,10 +123,13 @@ And the same for the columns:
 
 Finally, I conducted user testing: I asked 4 friends to try the game out. One friend even spotted a bug which i corrected. 
 
-Then I noticed a bug:
+Then just before hand-in, I noticed another bug:
 
-![screenshot of computer grid bug](/ASSETS/Images/2023-03-24%20(10).png)
-When I first started the project, i used numbers for both columns and rows. At some point, i thought that for better visibiliy the rows should have numbers, and columns letters. But that was after i had written most of the code- this must have been a left over. I researched and looked for a simple fix and Stackoverflow gave me a little trick for converting the integer column number into a letter by using the [chr() function](https://www.w3schools.com/python/ref_func_chr.asp). After several tries i managed to fix the bug:
+![screenshot of computer grid bug](/ASSETS/Images/2023-03-24%20(10).png) \
+\
+When I first started the project, I used numbers for both columns and rows. At some point, i thought that for better visibiliy and user experience the rows should have numbers, and the columns letters. But that was after I had written most of the code- this must have been a left over.  After a short period of frustration (and panic), I researched and looked for a simple fix and Stackoverflow gave me a little trick for converting the integer column number into a letter by using the [chr() function](https://www.w3schools.com/python/ref_func_chr.asp). After several tries i managed to fix the bug:  
+  
+
 ![screenshot of grid game with correct computer grid reusults](/ASSETS/Images/2023-03-24%20(13).png)
 
 
@@ -136,7 +143,9 @@ And the result after having dealt with most issues:
 
 ![screenshot of validator result](/ASSETS/Images/Screenshot%202023-03-23%20at%2016-26-30%20CI%20Python%20Linter.png)
 
-The issues that remained on the list are to do with the ASCII graphics and not with the pure code in the editor.
+The issues that remained on the list are to do with the ASCII graphics and not with the pure code in the editor. In order to fix that I again searched google for a tip ([more info on the colorama module from Stackoverflow](https://stackoverflow.com/questions/61686780/python-colorama-print-all-colors)). I found a suggestion on a website that mentioned colorama- First I had to install it by running the command pip install colorama in the terminal. Then i changed the Battleship ASCII art to pass the linter test:  
+
+![screenshot of linter result showing no errors](/ASSETS/Images/Screenshot%202023-03-24%20at%2020-03-35%20CI%20Python%20Linter.png)
 
 Once these issues were sorted out, and throughout the process of building the game, i ran it and tried to play it multiple times- making sure that every aspect was working as expected and without bugs.
 
@@ -166,4 +175,5 @@ In order to deploy, the following steps were taken:
 - [Ozzmaker](https://ozzmaker.com/) - for [Color in Python code](https://ozzmaker.com/add-colour-to-text-in-python/)
 - [Patorjk](https://patorjk.com/) - for the ASCII artwork
 - [Python 3.11.2 documentation](https://docs.python.org/3/)
+- [Python Package Index](https://pypi.org/) - for colorama
 - [Lucid](https://www.lucidchart.com/pages/) - for the flowchart

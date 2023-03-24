@@ -1,6 +1,9 @@
 import random
 import time
 import sys
+import colorama
+
+from colorama import Fore, Style
 
 """
 To creates a slow typing effect
@@ -32,17 +35,15 @@ Battleship ASCII pattern using -
 
 
 def print_ascii_art():
-    print("\033[32m ____        _   _   _           _     _           \033[0m")
-    print("\033[32m|  _ \      | | | | | |         | |   (_)          \033[0m")
-    print("\033[32m| |_) | __ _| |_| |_| | ___  ___| |__  _ _ __  ___\033[0m")
-    print("\033[32m|  _ < / _` | __| __| |/ _ \/ __| '_ \| | '_ \/ __|\033[0m")
-    print("\033[32m| |_) | (_| | |_| |_| |  __/\__ \ | | | "
-          "| |_) \__ \\\033[0m")
-    print("\033[32m|____/ \__,_|\__|\__|_|\___||___/_| |_|_| .__/|___/\033[0m")
-    print("\033[32m                                         | |        "
-          "\033[0m")
-    print("\033[32m                                         |_|        "
-          "\033[0m")
+    colorama.init()
+    print(Fore.GREEN + " ____        _   _   _           _     _           ")
+    print("|  _ \\      | | | | | |         | |   (_)          ")
+    print("| |_) | __ _| |_| |_| | ___  ___| |__  _ _ __  ___")
+    print("|  _ < / _` | __| __| |/ _ \\/ __| '_ \\| | '_ \\/ __|")
+    print("| |_) | (_| | |_| |_| |  __/\\__ \\ | | | | |_) \\__ \\")
+    print("|____/ \\__,_|\\__|\\__|_|\\___||___/_| |_|_| .__/|___/")
+    print("                                         | |        ")
+    print("                                         |_|        ")
 
 
 """
@@ -261,15 +262,18 @@ def play_game():
             if not computer_ships:
                 print(f"It took you {num_guesses} turns to sink all  "
                       f"battleships! you're a genius!")
+                print()
                 break
         computer_guess_location = computer_guess()
         check_computer_guess(computer_guess_location)
         if not player_ships:
             print(f"The computer sunk all of your ships in {num_guesses} "
                   f"turns! You lose!")
+            print()
             break
         print(f"The computer guessed row {computer_guess_location[0] + 1} "
               f"and column {chr(computer_guess_location[1] + 65)}")
+        print()
         print_grid()
 
 
