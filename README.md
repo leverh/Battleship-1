@@ -83,8 +83,14 @@ The game will be won once all ships (either the computer's or the player's) have
 
 ![screenshot of terminal error message requesting user to enter the correct data format](/ASSETS/Images/2023-03-24%20(6).png)
 
+# The look
+
+Even though this is a terminal game, I tried to make it as fun and as readbale as possible for the user. Along with the humorist comments, it reminded me of these retro games from the 80's - which is why I changed (at a late stage) the text color from pink to toxic green (like computers used to have back in the day). I also added a slow typing effect, and a faster typing effect- again- to create this retro atmosphere. 
+
 
 # Flowchart of game process
+
+The following flowchart helped me sort things inside of my head as to the general logic and stages I needed to take while developing this game:
 
 ![flowchart graphic of game process](/ASSETS/Images/battleships1(1).png)
 
@@ -97,11 +103,11 @@ Every step of the code was tested using:
 - tests on [Jupyter](https://jupyter.org/) - which i discovered to be very valuable.
 - I also used __Visual Studio Code__  (not in GitPod) to check my code and re-write it over and over again. I ended up with 9 versions of the files (run.py, run1.py, run2.py, run3.py etc.)- reduced slowly to 6 with every step of the way and every change I made
 
-Screenshots of input validation testing: 
+Input validation testing: 
 
 ![screenshot of instruction input validation](/ASSETS/Images/2023-03-23%20(9).png)
 
-Checking that user has fully entered the words yes or no. If the appropriate input was not entered the user will be told the input was invalid and asked to enter it again.
+Checking that user has fully entered the words yes or no. If the appropriate input was not entered, the user will be told the input was invalid and asked to enter it again.
 
 Another input validation for the game row grid: 
 
@@ -111,7 +117,7 @@ And the same for the columns:
 
 ![screenshot of grid input validation](/ASSETS/Images/2023-03-24%20(8).png)
 
-Finally, I conducted user testing: I asked 3 friends to try the game out. One friend even spotted a bug which i corrected. 
+Finally, I conducted user testing: I asked 4 friends to try the game out. One friend even spotted a bug which i corrected. 
 
 ### Linter
 
