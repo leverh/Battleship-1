@@ -149,23 +149,23 @@ def get_player_input():
         try:
             guess_row = int(input("Please guess row (numbers 1  to 5): \n"))
             if guess_row < 1 or guess_row > 5:
-                print("Your chosen numbers were out"
+                print("Your input was not a number"
                       " of the specified range (1-5) \n")
             else:
                 break
         except ValueError:
-            print("Your chosen numbers were out of the specified range 1-5 \n")
+            print("Your input was not of the specified range 1-5 \n")
     while True:
         try:
             column = input("Please guess column (letters A-E): \n").upper()
             if column not in 'ABCDE':
-                print("Your chosen letter was out of"
+                print("Your input was not of"
                       " the specified range (A-E) \n")
             else:
                 guess_column = col_numbers[column]
                 break
         except KeyError:
-            print("Your chosen letter was out of the specified range (A-E) \n")
+            print("Your input was not of the specified range (A-E) \n")
     return [guess_row - 1, guess_column]
 
 

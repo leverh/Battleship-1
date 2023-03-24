@@ -91,12 +91,29 @@ The game will be won once all ships (either the computer's or the player's) have
 # Testing
 
 Every step of the code was tested using: 
-- print statements  
+- print statements to check if functions carries through.
 - by trying to run the code over and over again until every little bug was fixed. 
 - certain processes were also checked on the [Python Tutor](https://pythontutor.com/python-debugger.html#mode=edit) website 
 - tests on [Jupyter](https://jupyter.org/) - which i discovered to be very valuable.
 - I also used __Visual Studio Code__  (not in GitPod) to check my code and re-write it over and over again. I ended up with 9 versions of the files (run.py, run1.py, run2.py, run3.py etc.)- reduced slowly to 6 with every step of the way and every change I made
 
+Screenshots of input validation testing: 
+
+![screenshot of instruction input validation](/ASSETS/Images/2023-03-23%20(9).png)
+
+Checking that user has fully entered the words yes or no. If the appropriate input was not entered the user will be told the input was invalid and asked to enter it again.
+
+Another input validation for the game row grid: 
+
+![screenshot of grid input validation](/ASSETS/Images/2023-03-24%20(6).png)
+
+And the same for the columns:
+
+![screenshot of grid input validation](/ASSETS/Images/2023-03-24%20(8).png)
+
+Finally, I conducted user testing: I asked 3 friends to try the game out. One friend even spotted a bug which i corrected. 
+
+### Linter
 
 I started off with 258 issues found on [CI's Python Linter](https://pep8ci.herokuapp.com/)
 
@@ -110,15 +127,29 @@ The issues that remained on the list are to do with the ASCII graphics and not w
 
 Once these issues were sorted out, and throughout the process of building the game, i ran it and tried to play it multiple times- making sure that every aspect was working as expected and without bugs.
 
+# Deployment
+
+The game was deployed to Heroku using Code Instutute's mock terminal.
+In order to deploy, the following steps were taken:
+
+- Creating a **Heroku** account 
+- Choosing **Python** as the primary development language
+- Choosing the 'Create New App' button
+- Naming the application 
+- Adding the **Python** and **nodejs** buildpacks in the settings menu
+- Linking my GitHub repository with Heroku on the deployment tab
+- The last step is clicking on 'Deploy Branch'. I used the manual deploys at the beginning and switched to automatic in later stages. 
+
 
 # Future development
 
 - Allowing the player to choose the grid size.
 - Connecting the game to a frontend enviornment with proper game graphics.
+- Having a googlesheets spreadsheet containing statistical data of games played.
 
 # Credits
 
-- Code institute Gitpod Template
+- [Code institute's](https://learn.codeinstitute.net/) Gitpod Template
 - [Ozzmaker](https://ozzmaker.com/) - for [Color in Python code](https://ozzmaker.com/add-colour-to-text-in-python/)
 - [Patorjk](https://patorjk.com/) - for the ASCII artwork
 - [Python 3.11.2 documentation](https://docs.python.org/3/)
