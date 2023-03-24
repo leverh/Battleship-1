@@ -123,11 +123,11 @@ And the same for the columns:
 
 Finally, I conducted user testing: I asked 4 friends to try the game out. One friend even spotted a bug which i corrected. 
 
-Then just before hand-in, I noticed another bug:
+Then just before hand-in, I noticed another bug (explained below the screenshot):
 
 ![screenshot of computer grid bug](/ASSETS/Images/2023-03-24%20(10).png) \
 \
-When I first started the project, I used numbers for both columns and rows. At some point, i thought that for better visibiliy and user experience the rows should have numbers, and the columns letters. But that was after I had written most of the code- this must have been a left over.  After a short period of frustration (and panic), I researched and looked for a simple fix and Stackoverflow gave me a little trick for converting the integer column number into a letter by using the [chr() function](https://www.w3schools.com/python/ref_func_chr.asp). After several tries i managed to fix the bug:  
+When I first started the project, I used numbers for both columns and rows. At some point, i thought that for better visibility and user experience the rows should have numbers, and the columns letters. But that was after I had written most of the code- this must have been a left over.  After a short period of frustration (and panic), I researched and looked for a simple fix and Stackoverflow gave me a little trick for converting the integer column number into a letter by using the [chr() function](https://www.w3schools.com/python/ref_func_chr.asp). After several tries i managed to fix the bug:  
   
 
 ![screenshot of grid game with correct computer grid reusults](/ASSETS/Images/2023-03-24%20(13).png)
@@ -143,9 +143,11 @@ And the result after having dealt with most issues:
 
 ![screenshot of validator result](/ASSETS/Images/Screenshot%202023-03-23%20at%2016-26-30%20CI%20Python%20Linter.png)
 
-The issues that remained on the list are to do with the ASCII graphics and not with the pure code in the editor. In order to fix that I again searched google for a tip ([more info on the colorama module from Stackoverflow](https://stackoverflow.com/questions/61686780/python-colorama-print-all-colors)). I found a suggestion on a website that mentioned colorama- First I had to install it by running the command pip install colorama in the terminal. Then i changed the Battleship ASCII art to pass the linter test:  
+The issues that remained on the list are to do with the ASCII graphics and not with the pure code in the editor. In order to fix that I again searched google for a tip and found this:  a Stackoverflow [question that mentioned colorama](https://stackoverflow.com/questions/61686780/python-colorama-print-all-colors). I researched this further on a few other pages and discovered how to use it- as well as how to enable it on Heroku. First I had to install it by running the command **pip install colorama** in the terminal. Then i changed the Battleship ASCII art to pass the linter test:  
 
-![screenshot of linter result showing no errors](/ASSETS/Images/Screenshot%202023-03-24%20at%2020-03-35%20CI%20Python%20Linter.png)
+![screenshot of linter result showing no errors](/ASSETS/Images/Screenshot%202023-03-24%20at%2020-03-35%20CI%20Python%20Linter.png)  
+
+Finally, in order for this fix to work, I had to add the text **colorama==0.4.4** to my requirements.txt file that according to the documentation, will automatically install the dependencies required on for colorama on **Heroku**. 
 
 Once these issues were sorted out, and throughout the process of building the game, i ran it and tried to play it multiple times- making sure that every aspect was working as expected and without bugs.
 
