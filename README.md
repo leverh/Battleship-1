@@ -1,6 +1,6 @@
 # Battleships - Python based game
 
-![Screenshot image of the Battleships game terminal on Heroku](/ASSETS/Images/Screenshot%202023-03-22%20at%2011-37-55%20Python%20Terminal%20by%20Code%20Institute.png)
+![Screenshot image of the Battleships game terminal on Heroku](/ASSETS/Images/Screenshot%202023-03-24%20at%2012-00-59%20Python%20Terminal%20by%20Code%20Institute.png)
 
 Battleships is a turn based grid game that runs on Heroku, in which the player plays against the computer.
 
@@ -69,19 +69,19 @@ The game will be won once all ships (either the computer's or the player's) have
 
 - Allow the player to choose whether they would like to read the instructions for the game:
 
-![screenshot of optional game instructions](/ASSETS/Images/2023-03-23%20(3).png)
+![screenshot of optional game instructions](/ASSETS/Images/2023-03-23%20(10).png)
 
 - Letting the player know how many turns it took them  or the computer to win:
 
-![screenshot of terminal notifying player how many turns it took for them to win](/ASSETS/Images/2023-03-23%20(2).png)
+![screenshot of terminal notifying player how many turns it took for them to win](/ASSETS/Images/2023-03-23%20(11).png)
 
 - Validation in the different stages to make sure the user inputs the correct data type (integars, character, etc.). for exmaple, the instructions require the player to type yes or no- if the wrong or incorrect data type is entered, the user will get an error message as seen in the screenshot below
 
-![screenshot of terminal error message requesting the user to enter the correct data type](/ASSETS/Images/2023-03-23%20(6).png)
+![screenshot of terminal error message requesting the user to enter the correct data type](/ASSETS/Images/2023-03-23%20(12).png)
 
 - Validation when user enters coordinates for ships and an error message when incorrect data is entered:
 
-![screenshot of terminal error message requesting user to enter the correct data format](/ASSETS/Images/2023-03-23%20(8).png)
+![screenshot of terminal error message requesting user to enter the correct data format](/ASSETS/Images/2023-03-24%20(6).png)
 
 
 # Flowchart of game process
