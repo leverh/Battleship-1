@@ -119,6 +119,13 @@ And the same for the columns:
 
 Finally, I conducted user testing: I asked 4 friends to try the game out. One friend even spotted a bug which i corrected. 
 
+Then I noticed a bug:
+
+![screenshot of computer grid bug](/ASSETS/Images/2023-03-24%20(10).png)
+When I first started the project, i used numbers for both columns and rows. At some point, i thought that for better visibiliy the rows should have numbers, and columns letters. But that was after i had written most of the code- this must have been a left over. I researched and looked for a simple fix and Stackoverflow gave me a little trick for converting the integer column number into a letter by using the [chr() function](https://www.w3schools.com/python/ref_func_chr.asp). After several tries i managed to fix the bug:
+![screenshot of grid game with correct computer grid reusults](/ASSETS/Images/2023-03-24%20(13).png)
+
+
 ### Linter
 
 I started off with 258 issues found on [CI's Python Linter](https://pep8ci.herokuapp.com/)

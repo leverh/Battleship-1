@@ -269,7 +269,7 @@ def play_game():
                   f"turns! You lose!")
             break
         print(f"The computer guessed row {computer_guess_location[0] + 1} "
-              f"and column {computer_guess_location[1] + 1}")
+              f"and column {chr(computer_guess_location[1] + 65)}")
         print_grid()
 
 
