@@ -147,7 +147,7 @@ The issues that remained on the list are to do with the ASCII graphics and not w
 
 ![screenshot of linter result showing no errors](/ASSETS/Images/Screenshot%202023-03-24%20at%2020-03-35%20CI%20Python%20Linter.png)  
 
-Finally, in order for this fix to work, I had to add the text **colorama==0.4.4** to my requirements.txt file that according to the documentation, will automatically install the dependencies required on for colorama on **Heroku**. 
+Finally, in order for this fix to work also on Heroku, I had to add the text **colorama==0.4.4** to my requirements.txt file that according to the documentation, will automatically install the dependencies required for colorama on **Heroku**. 
 
 Once these issues were sorted out, and throughout the process of building the game, i ran it and tried to play it multiple times- making sure that every aspect was working as expected and without bugs.
 
