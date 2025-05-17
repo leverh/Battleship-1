@@ -1,10 +1,19 @@
-# Battleships - Python based game
+# Battleships - Python based game (Terminal Game)
 
 ![Screenshot image of the Battleships game terminal on Heroku](/ASSETS/Images/Screenshot%202023-03-24%20at%2012-00-59%20Python%20Terminal%20by%20Code%20Institute.png)
 
 Battleships is a turn based grid game that runs on Heroku, in which the player plays against the computer.
 
-[Click here to play to game on Heroku](https://battleappli.herokuapp.com/).
+[Click here to play to game on Replit](https://replit.com/@MyEmail4/Battleship-1)
+
+### 💡 Note:
+This game used to be hosted on Heroku with a live terminal environment.  
+Unfortunately, Heroku removed its free tier — so now I'm running it on Replit instead.  
+Still free, still fun… just one extra click.
+
+> 🖥️ **To play the game:**
+> - Click the green **"Run"** button above
+> - Play directly in the **terminal at the bottom of the screen**
 
 # Game play
 
@@ -50,7 +59,7 @@ The game will be won once all ships (either the computer's or the player's) have
     - Writing the code and using the terminal for testing and manipulating the code
 - __GitHub__
     - Version control
-- __Heroku__
+- __Replit__
     - Deployment
 
 ## Libraries/ Modules
@@ -90,13 +99,6 @@ The game will be won once all ships (either the computer's or the player's) have
 # The look
 
 Even though this is a terminal game, I tried to make it as fun and as readbale as possible for the user. Along with the humorist comments, it reminded me of these retro games from the 80's - which is why I changed (at a late stage) the text color from pink to toxic green (like computers used to have back in the day). I also added a slow typing effect, and a faster typing effect- again- to create this retro atmosphere. 
-
-
-# Flowchart of game process
-
-The following flowchart helped me sort things inside of my head as to the general logic and stages I needed to take while developing this game:
-
-![flowchart graphic of game process](/ASSETS/Images/battleships1(1).png)
 
 # Testing
 
