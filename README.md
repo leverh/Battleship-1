@@ -4,7 +4,7 @@
 
 Battleships is a turn based grid game that runs on Heroku, in which the player plays against the computer.
 
-<a href="https://replit.com/@MyEmail4/Battleship-1" target="_blank">Click here to play the game on Replit</a>
+[Click here to play to game on Replit](https://replit.com/@MyEmail4/Battleship-1)
 
 ### 💡 Note:
 This game used to be hosted on Heroku with a live terminal environment.  
