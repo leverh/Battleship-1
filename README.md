@@ -2,7 +2,9 @@
 
 ![Screenshot image of the Battleships game terminal on Heroku](/ASSETS/Images/Screenshot%202023-03-24%20at%2012-00-59%20Python%20Terminal%20by%20Code%20Institute.png)
 
-Battleships is a turn based grid game that runs on Heroku, in which the player plays against the computer.
+This was the third of five assessment projects I completed during my software development course in 2022, and it was awarded a distinction.
+
+Battleships is a turn based grid game that runs on Heroku, in which the player plays against the computer. 
 
 [Click here to play to game on Replit](https://replit.com/@MyEmail4/Battleship-1)
 
@@ -175,7 +177,6 @@ In order to deploy, the following steps were taken:
 
 # Credits
 
-- [Code institute's](https://learn.codeinstitute.net/) Gitpod Template
 - [Ozzmaker](https://ozzmaker.com/) - for [Color in Python code](https://ozzmaker.com/add-colour-to-text-in-python/)
 - [Patorjk](https://patorjk.com/) - for the ASCII artwork
 - [Python 3.11.2 documentation](https://docs.python.org/3/)
